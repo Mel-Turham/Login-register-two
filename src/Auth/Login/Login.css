@@ -13,7 +13,7 @@
 }
 
 .container form {
-	width: fit-content;
+	flex: 0.6;
 	padding: 35px 40px;
 	border: 1px solid rgba(211, 211, 211, 0.838);
 	overflow: hidden;
@@ -45,23 +45,26 @@ form .form-top p {
 .container-field {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 8px;
 }
 
 .container-field .field {
 	display: flex;
 	flex-direction: column;
-	gap: 4px;
-	position: relative;
+	gap: 2px;
 }
 
-.container-field .field i {
+.container-field .field .input-container {
+	height: 40px;
+	position: relative;
+	width: 100%;
+}
+
+.container-field .field .input-container i {
 	position: absolute;
-	top: 75%;
+	top: 50%;
 	right: 5px;
 	transform: translateY(-50%);
-	width: 23px;
-	height: 23px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -70,11 +73,24 @@ form .form-top p {
 	color: #000100;
 }
 
+.container-field .field:nth-child(2) .input-container {
+	margin-bottom: 10px;
+}
+
+.container-field .field .errorMessage {
+	color: red;
+	font-size: 8px;
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
 .container-field .field input[type='text'],
 .container-field .field input[type='password'],
 .container-field .field input[type='email'] {
-	height: 40px;
 	width: 100%;
+	height: 100%;
 	padding: 0 15px;
 	position: relative;
 	border: 1px solid #ccc;
@@ -103,6 +119,7 @@ form .form-top p {
 .container-field .field.ckeckbox {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+	align-items: center;
 }
 
 .container-field .field.ckeckbox > div {
@@ -187,7 +204,7 @@ form .form-top p {
 	}
 
 	.container form {
-		width: 100%;
+		flex: 1;
 		padding-inline: 20px;
 	}
 
