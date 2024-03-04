@@ -36,7 +36,7 @@ const Login = () => {
 						<form onSubmit={formik.handleSubmit}>
 							<div className='form-top'>
 								<h2>Welcome !</h2>
-								<h1>Sign in to</h1>
+								<h1>Sign in to continue </h1>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 							</div>
 
