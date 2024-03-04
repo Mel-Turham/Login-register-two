@@ -71,7 +71,8 @@ form .form-top p {
 }
 
 .container-field .field input[type='text'],
-.container-field .field input[type='password'] {
+.container-field .field input[type='password'],
+.container-field .field input[type='email'] {
 	height: 40px;
 	width: 100%;
 	padding: 0 15px;

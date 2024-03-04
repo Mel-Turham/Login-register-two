@@ -3,7 +3,7 @@ import { FaEyeSlash } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 import Logo from '../../assets/discution.svg';
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const Login = () => {
 	const [isShowPassword, setIsShowPassword] = useState(false);
 
@@ -56,7 +56,8 @@ const Login = () => {
 
 						<div className='recg-register'>
 							<span>
-								Don&quot;t have an Account ? <a href=''>Register </a>
+								Don&quot;t have an Account ?{' '}
+								<Link to='/Register'>Register</Link>
 							</span>
 						</div>
 					</div>

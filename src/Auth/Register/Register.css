@@ -1,0 +1,195 @@
+.main {
+	width: 100%;
+	min-height: 100vh;
+
+	display: grid;
+	place-content: center;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container form {
+	width: fit-content;
+	padding: 20px 40px;
+	border: 1px solid rgba(211, 211, 211, 0.838);
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: white;
+	height: 100%;
+}
+
+form .form-top {
+	margin-bottom: 1rem;
+}
+
+form .form-top h2 {
+	font-weight: 400;
+	font-size: 18px;
+	margin-bottom: 1rem;
+}
+
+form .form-top h1 {
+	font-weight: 500;
+	font-size: 1.7rem;
+	margin-bottom: 5px;
+}
+form .form-top p {
+	font-size: 15px;
+	text-wrap: pretty;
+}
+
+.container-field {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.container-field .field {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	position: relative;
+}
+
+.container-field .field i {
+	position: absolute;
+	top: 75%;
+	right: 5px;
+	transform: translateY(-50%);
+	width: 23px;
+	height: 23px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	cursor: pointer;
+	color: #000100;
+}
+.container-field .field input[type='text'],
+.container-field .field input[type='password'] {
+	height: 40px;
+	width: 100%;
+	padding: 0 15px;
+	position: relative;
+	border: 1px solid #ccc;
+	border-radius: 1.5px;
+	background-color: transparent;
+}
+
+.container-field .field input[type='text']:focus,
+.container-field .field input[type='password']:focus,
+.container-field .field input[type='email']:focus {
+	outline: 1.7px solid #242424;
+}
+
+.container-field .field input::placeholder {
+	width: fit-content;
+	font-size: 14px;
+	text-transform: capitalize;
+}
+
+.container-field .field label {
+	font-size: 15px;
+	width: fit-content;
+	font-weight: 400;
+}
+
+.container-field .field.ckeckbox {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+}
+
+.container-field .field.ckeckbox > div {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+
+.container-field .field.ckeckbox > div label {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.container-field .field.ckeckbox > div input {
+	accent-color: #242424;
+}
+
+.container-field .field.ckeckbox > p {
+	font-size: 12px;
+	text-align: end;
+	font-weight: 300;
+}
+
+.container-field button[type='submit'] {
+	background-color: #242424;
+	border: 1px solid transparent;
+	height: 40px;
+	vertical-align: middle;
+	color: #fff;
+	padding: 5px 0;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.12ms ease-in-out;
+}
+
+.container-field button[type='submit']:hover {
+	transform: translateY(-2px);
+	box-shadow: -2px 3px 1px #000100;
+}
+
+.container .right {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.container .right img {
+	max-width: 100%;
+	aspect-ratio: 1/1;
+	display: block;
+	object-fit: cover;
+}
+
+.container .recg-register {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.container .recg-register span {
+	font-weight: 200;
+	color: #242424;
+	font-size: 13.5px;
+}
+
+.container .recg-register a {
+	text-decoration: none;
+	font-weight: 600;
+	color: #000100;
+}
+
+/* media query */
+@media (min-width: 320px) and (max-width: 480px) {
+	.container {
+		padding: 1rem;
+	}
+
+	.container form {
+		width: 100%;
+		padding-inline: 20px;
+	}
+
+	.container .right {
+		display: none;
+	}
+}
