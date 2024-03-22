@@ -9,6 +9,7 @@ body {
 	font-family: 'Inter', sans-serif;
 	line-height: 1.5;
 	min-height: 100vh;
+	min-height: 100svh;
 	text-decoration: none;
 	background-color: #f2f2f2;
 }

@@ -20,16 +20,19 @@ const Login = () => {
 					}}
 					validationSchema={Yup.object({
 						userName: Yup.string()
+							.trim()
 							.min(10, 'Minimum 6 caracter')
 							.required('Your user name is required'),
-						password: Yup.number()
+						password: Yup.string()
+							.trim()
 							.required('The password is required')
 							.min(8, 'Minimum 8 caracter'),
 					})}
-					onSubmit={(values) => {
+					onSubmit={(values, { resetForm }) => {
 						setTimeout(() => {
 							alert(JSON.stringify(values, null, 2));
 						}, 1000);
+						resetForm();
 					}}
 				>
 					{(formik) => (
